@@ -1,0 +1,26 @@
+.profile {
+	text-align: center;
+}
+
+.profile img {
+	display: inline-block;
+	
+	margin: 0 auto 1.25em;
+}
+
+.profile h4 {
+	margin-bottom: .85em;
+	
+	font-size: 18px;
+}
+
+.profile .profile-title {
+	margin-bottom: 1em;
+	
+	color: #777;
+	
+	font-size: 16px;
+	font-style: italic;
+}
+
+

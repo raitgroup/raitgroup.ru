@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Raitgroup {{page.title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">    
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+        
+    <link href="./css/focus.css" rel="stylesheet"> 
+    <link href="./css/focus-responsive.css" rel="stylesheet">
+       
+    <link href="./css/pages/homepage.css" rel="stylesheet">   
+
+    {%if page.url == "/contacts.html" %}
+    <link href="./css/pages/contacts.css" rel="stylesheet">   
+    {% endif %}
+
+    {%if page.url == "/services.html" %}
+    <link href="./css/pages/services.css" rel="stylesheet">   
+    {% endif %}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+  </head>
+
+<body>
+
+<div id="wrapper" class="clearfix">
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="grid-10">
+					<h1 id="title">	<a href="./index.html">	Raitgroup </a> </h1>
+				</div>
+				<div class="grid-2">
+					<strong>+7 (351) 776-49-60</strong><br/>
+					<strong>+7 (351) 776-49-61</strong><br/>
+				</div>
+			</div> <!-- /row -->
+		</div> <!-- /container -->
+	</div> <!-- /header -->	
+	
+	<div id="nav" class="clearfix">
+		
+		<div class="container">
+		
+			<ul id="main-nav">
+				<li {%if page.url == "/index.html" %}class="active"{% endif %}>
+					<a href="/index.html">Начало</a>
+				</li>
+				
+				<li {%if page.url == "/about.html" %}class="active"{% endif %}>
+					<a href="/about.html">О Компании</a>
+				</li>
+				
+				<li {%if page.url == "/services.html" %}class="active"{% endif %}>
+					<a href="/services.html">Услуги</a>
+				</li>
+				
+				<li {%if page.url == "/solutions.html" %}class="active"{% endif %}>
+					<a href="/solutions.html">Решения</a>
+				</li>
+				
+				<li {%if page.url == "/contacts.html" %}class="active"{% endif %}>
+					<a href="/contacts.html">Контакты</a>
+				</li>
+				
+				
+			</ul>
+			
+		</div> <!-- /container -->
+		
+	</div> <!-- /nav -->
+	
+{% case page.url %}
+{% when '/index.html' %}
+	{% include masthead.html %}
+{% else%}
+
+	<div id="page-title">
+		<h1>{{page.title}}</h1>
+<!--		<p>{{page.intro}}</p> -->
+	</div> 
+
+{% endcase %}
+	
+	
+	{{ content }}
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="grid-4">
+					<h1 id="footer-logo">Focus Business</h1>
+					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div> <!-- /grid-4 -->
+				
+				<div class="grid-4">
+					<h3><span class="slash">//</span> Socialize with us!</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt magna aliqua.</p>
+					<ul class="social-icons-container">						
+						<li>
+							<a href="javascript:;" class="social-icon social-icon-twitter">
+								Twitter
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="social-icon social-icon-googleplus">
+								Google +
+							</a>
+						</li>
+						<li>							
+							<a href="javascript:;" class="social-icon social-icon-facebook">
+								Facebook
+							</a>
+						</li>
+					</ul>
+				</div> <!-- /grid-4 -->
+				
+				<div class="grid-4">
+					<h3><span class="slash">//</span> Subscribe and get updates</h3>
+					<p>Subscribe to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+					<form>
+						<input type="text" name="subscribe_email" placeholder="Your Email">
+						<br>
+						<button class="btn btn-warning">Subscribe</button>
+					</form>
+				</div><!-- /grid-4 -->
+			</div> <!-- /row -->
+		</div> <!-- /container -->
+	</div> <!-- /footer -->
+
+	<div id="copyright">
+		<div class="container">
+			<div class="row">
+				<div id="rights" class="grid-6">
+				© 2012 Raitgroup.
+				</div> <!-- /grid-6 -->
+
+				<div id="totop" class="grid-6">
+					<a href="http://propelui.com">Theme by Propel.</a>
+				</div> <!-- /grid-6 -->
+			</div> <!-- /row -->
+		</div> <!-- /container -->
+	</div> <!-- /copyright -->
+</div> <!-- /wrapper -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/focus.js"></script>
+
+<script>
+
+$(function () {
+	
+	$('#masthead-carousel').carousel ({ interval: false });
+	
+});
+
+</script>
+</body>
+</html>
