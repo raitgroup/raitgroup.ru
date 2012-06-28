@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Focus Business Documentation</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">    
+    
+    <!-- Styles -->
+    
+    <link href="./docs/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="./docs/css/docs.css" rel="stylesheet">  
+    
+    <link href="./docs/js/google-code-prettify/prettify.css" rel="stylesheet"> 
+	<script src="./docs/js/google-code-prettify/prettify.js"></script>
+        
+    <!-- Javascript -->
+    
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	<script src="./docs/js/bootstrap.min.js"></script>
+	
+	
+	<script src="./docs/js/jquery.ba-bbq.min.js"></script>
+	<script src="./docs/js/jquery.scrollTo-min.js"></script>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+  </head>
+
+<body>
+	
+	
+	
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#home">Documentation Home</a>
+         
+          <ul class="nav">
+	        <li><a href="javascript:;">Version 1.0</a></li>
+	        <li class="demo"><a href="./index.html" target="_blank">View Demo</a></li>
+	      </ul>
+	      
+          <ul class="nav pull-right">
+	        <li><a href="http://propelui.com" target="_blank">Built by Propel.</a></li>
+	      </ul>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	
+<div id="wrapper">
+	
+	<div id="nav">
+		
+		<ul class="nav nav-list">
+			
+			<li class="misc"><a href="#home"><i class="icon-home"></i> Home</a></li>
+			
+			<li class="nav-header">
+			Styles
+			</li>
+			<li><a href="#grid"><i class="icon-th"></i> Grid</a></li>				
+			<li><a href="#masthead"><i class="icon-picture"></i> Masthead</a></li>
+			<li><a href="#pricing"><i class="icon-money"></i> Pricing Plans</a></li>
+			<li><a href="#faq"><i class="icon-question-sign"></i> Faq</a></li>
+			<li><a href="#misc"><i class="icon-asterisk"></i> Miscellaneous</a></li>
+				
+		</ul>
+		
+	</div> <!-- /nav -->
+	
+	
+	<div id="content">		
+
+
+<div id="error-content" class="content"><h1>Page Not Found</h1></div><div id="faq-content" class="content"><h1><i class="icon-question-sign"></i> Faq</h1>
+
+
+
+<hr />
+
+<h3>Includes</h3>
+
+<h4>Stylesheet</h4>
+
+<pre>&lt;link href="./js/plugins/faq/faq.css" rel="stylesheet"&gt;
+</pre>
+
+<h4>Javascript</h4>
+<pre>&lt;script src="./js/plugins/faq/faq.js"&gt;&lt;/script&gt;
+</pre>
+
+<hr />
+
+<h3>Markup</h3>
+
+<pre>&lt;ol class="faq-list"&gt;
+						
+	&lt;li&gt;		
+		&lt;h4&gt;How can I get my own domain name?&lt;/h4&gt;
+		&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate&lt;/p&gt;
+	&lt;/li&gt;
+	
+	...
+	
+&lt;/ol&gt;			
+			
+</pre>
+
+<hr />
+
+<h3>Javascript</h3>
+
+<pre>$('.faq-list').goFaq ({ 
+	enableSearch: true,
+	enableToc: true,
+	enableStyling: true
+});</pre></div><div id="grid-content" class="content"><h1><i class="icon-th"></i> Grid</h1>
+
+<p>This template uses a custom grid layout that is different from the default Bootstrap layout and classes.</p>
+
+<hr />
+
+<h3>Default Markup</h3>
+
+
+
+<pre>&lt;div class="row"&gt;
+  &lt;div class="grid-4"&gt;...&lt;/div&gt;
+  &lt;div class="grid-8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<br />
+
+<h4>Available Grid Classes</h4>
+
+<ul class="list-class">
+	<li><code>.grid-12</code></li>
+	<li><code>.grid-11</code></li>
+	<li><code>.grid-10</code></li>
+	<li><code>.grid-9</code></li>
+	<li><code>.grid-8</code></li>
+	<li><code>.grid-7</code></li>
+	<li><code>.grid-6</code></li>
+	<li><code>.grid-5</code></li>
+	<li><code>.grid-4</code></li>
+	<li><code>.grid-3</code></li>
+	<li><code>.grid-2</code></li>
+	<li><code>.grid-1</code></li>
+</ul>
+
+
+
+<hr />
+
+<h3>Offsetting Columns</h3>
+	
+<pre>&lt;div class="row"&gt;
+  &lt;div class="grid-4"&gt;...&lt;/div&gt;
+  &lt;div class="grid-4 prepend-4"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<br />
+
+<h4>Prepend Classes</h4>
+
+<p>To add empty columns <strong>before</strong> a colunm use one of the following classes. Make sure that the total columns for any row equal no more than 12.</p>
+
+<pre>&lt;div class="grid-8 prepend-4"&gt;
+	...
+&lt;/div&gt;
+</pre>
+
+<ul class="list-class">
+	<li><code>.prepend-12</code></li>
+	<li><code>.prepend-11</code></li>
+	<li><code>.prepend-10</code></li>
+	<li><code>.prepend-9</code></li>
+	<li><code>.prepend-8</code></li>
+	<li><code>.prepend-7</code></li>
+	<li><code>.prepend-6</code></li>
+	<li><code>.prepend-5</code></li>
+	<li><code>.prepend-4</code></li>
+	<li><code>.prepend-3</code></li>
+	<li><code>.prepend-2</code></li>
+	<li><code>.prepend-1</code></li>
+</ul>
+
+<br />
+
+<h4>Append Classes</h4>
+
+<p>To add empty columns <strong>after</strong> a colunm use one of the following classes. Make sure that the total columns for any row equal no more than 12.</p>
+
+<pre>&lt;div class="grid-8 append-4"&gt;
+	...
+&lt;/div&gt;
+</pre>
+
+<ul class="list-class">
+	<li><code>.append-12</code></li>
+	<li><code>.append-11</code></li>
+	<li><code>.append-10</code></li>
+	<li><code>.append-9</code></li>
+	<li><code>.append-8</code></li>
+	<li><code>.append-7</code></li>
+	<li><code>.append-6</code></li>
+	<li><code>.append-5</code></li>
+	<li><code>.append-4</code></li>
+	<li><code>.append-3</code></li>
+	<li><code>.append-2</code></li>
+	<li><code>.append-1</code></li>
+</ul>
+
+
+
+
+<hr />
+
+
+
+
+<h3>Row Divider</h3>
+
+<p>To add a divider between rows create an <code>hr</code> element and add the class <code>.row-divider</code>.
+
+<pre>&lt;div class="row"&gt;
+	...
+&lt;/div&gt;
+
+&lt;hr class="row-divider" /&gt;
+
+&lt;div class="row"&gt;
+	...
+&lt;/div&gt;
+</pre></div><div id="home-content" class="content"><h1>Focus Documentation</h1>
+
+<p>Focus Business template is a stylish corporate business template based on Twitter Bootstrap Framework. Focus comes with ready made pricing tables, faq plugin and multiple page layouts.</p>
+
+<hr class="full" />
+
+
+<br />
+
+<div class="shortcuts">
+		
+</div> <!-- /shortcuts -->
+
+</div><div id="masthead-content" class="content"><h1><i class="icon-picture"></i> Masthead</h1>
+
+
+
+<hr />
+
+<h3>Carousel Container</h3>
+
+<p>This template uses a custom grid layout that is different from the default Bootstrap layout and classes.</p>
+
+<pre>&lt;div id="masthead-carousel" class="carousel slide"&gt;
+				
+	&lt;div class="carousel-inner"&gt;
+		
+		--- Items Go Here ---
+		
+	&lt;/div&gt;
+	
+	&lt;a class="carousel-control left" href="#masthead-carousel" data-slide="prev"&gt;
+	&lsaquo;
+	&lt;/a&gt;
+
+	&lt;a class="carousel-control right" href="#masthead-carousel" data-slide="next"&gt;
+	&rsaquo;
+	&lt;/a&gt;
+	
+&lt;/div&gt;
+</pre>
+
+
+
+<hr />
+
+
+
+<h3>Carousel Item</h3>
+
+<pre>&lt;div class="item"&gt;
+	&lt;img src="./img/masthead/masthead.jpg" alt="" /&gt;
+
+	&lt;div class="masthead-details"&gt;
+		
+		&lt;h2&gt;Masthead title goes right here!&lt;/h2&gt;
+		
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.&lt;/p&gt;
+		
+		&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.&lt;/p&gt;
+		
+	&lt;/div&gt;	
+
+&lt;/div&gt;
+</pre>
+
+
+
+<hr />
+
+
+<h3>Setup</h3>
+
+<p>Set the class <code>.active</code> to the item you want to display first. The <code>.active</code> class should only be set on one item.</p>
+
+<pre>&lt;div class="item active"&gt;
+	...
+&lt;/div&gt;
+
+&lt;div class="item"&gt;
+	...
+&lt;/div&gt;
+
+&lt;div class="item"&gt;
+	...
+&lt;/div&gt;
+</pre>
+</div><div id="misc-content" class="content"><h1><i class="icon-picture"></i> Masthead</h1>
+
+
+
+<hr />
+
+<h3>Heading Slash</h3>
+
+<p>This template uses a custom grid layout that is different from the default Bootstrap layout and classes.</p>
+
+<pre>&lt;h1&gt;
+	&lt;span class="slash"&gt;//&lt;/span&gt;
+	Heading Title
+&lt;/h1&gt;
+</pre>
+
+
+<hr />
+
+
+<h3>Page Title</h3>
+
+<p>Make sure you place the page title immediately following the <code>#nav</code> div.</p>
+
+<pre>&lt;div id="page-title"&gt;
+	
+	&lt;h1&gt;About Us&lt;/h1&gt;
+	&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+	
+&lt;/div&gt;
+</pre>
+</div><div id="pricing-content" class="content"><h1><i class="icon-money"></i> Pricing</h1>
+
+
+
+<hr />
+
+<h3>Includes</h3>
+
+<h4>Stylesheet</h4>
+
+<pre>&lt;link href="./css/components/plans.css" rel="stylesheet"&gt;</pre>
+
+<hr />
+
+<h3>Container</h3>
+
+<pre>&lt;div class="pricing-plans plans-4"&gt;
+
+	--- Plans go here ---
+	
+&lt;/div&gt;
+</pre>
+
+<br />
+
+
+<h4>Number of Plans</h4>
+
+<table class="table">
+	
+	<thead>
+		
+		<tr>
+			<th>Class</th>
+			<th>Description</th>
+		</tr>
+		
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td><code>.plans-4</code></td>
+			<td>4 Plans Up</td>
+		</tr>
+		<tr>
+			<td><code>.plans-3</code></td>
+			<td>3 Plans Up</td>
+		</tr>
+		<tr>
+			<td><code>.plans-2</code></td>
+			<td>2 Plans Up</td>
+		</tr>
+		<tr>
+			<td><code>.plans-1</code></td>
+			<td>1 Plans Up</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+<hr />
+
+<h3>Plan Html</h3>
+
+<pre>&lt;div class="plan-container"&gt;
+
+    &lt;div class="plan"&gt;
+    
+        &lt;div class="plan-header"&gt;
+            
+        	&lt;div class="plan-title"&gt;
+        		Micro	        		
+    		&lt;/div&gt; &lt;!-- /plan-title --&gt;
+            
+    		&lt;div class="plan-price"&gt;
+    			&lt;span class="note"&gt;$&lt;/span&gt;15&lt;span class="term"&gt;Per Month&lt;/span&gt;
+		&lt;/div&gt; &lt;!-- /plan-price --&gt;
+			
+        &lt;/div&gt; &lt;!-- /plan-header --&gt;	        
+        
+        &lt;div class="plan-features"&gt;
+        
+			&lt;ul&gt;
+				&lt;li&gt;&lt;strong&gt;Free&lt;/strong&gt; setup&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;1&lt;/strong&gt; Website&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;2&lt;/strong&gt; Projects&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;1GB&lt;/strong&gt; Storage&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;$0&lt;/strong&gt; Google Adwords Credit&lt;/li&gt;
+			&lt;/ul&gt;
+			
+		&lt;/div&gt; &lt;!-- /plan-features --&gt;
+		
+		&lt;div class="plan-actions"&gt;				
+			&lt;a href="javascript:;" class="btn"&gt;Purchase Now&lt;/a&gt;				
+		&lt;/div&gt; &lt;!-- /plan-actions --&gt;
+
+	&lt;/div&gt; &lt;!-- /plan --&gt;
+	
+&lt;/div&gt; &lt;!-- /plan-container --&gt;
+	
+		</pre>
+</div><div id="themes-content" class="content"><h1><i class="icon-adjust"></i> Color Themes</h1>
+
+
+<hr />
+
+
+<h3>Blue Theme</h3>
+
+<p>Corona Admin comes packaged with one example theme which can be found in the directory <code>/css/themes/</code>. Include the follow css stylesheets <strong>AFTER</strong> all other stylesheets.</p>
+
+<pre>&lt;link href="./css/themes/blue/theme.css" rel="stylesheet"&gt;
+</pre>
+
+
+<hr />
+
+
+<h3>Chart Colors</h3>
+
+<p>You can modify the chart colors by opening the <code>/js/Corona.js</code> file and modifying the chartColors variable.</p>
+
+
+<pre>var chartColors = ["#FF9900", "#222222", "#555555", "#888888"];</pre>
+
+
+<hr />
+
+
+<h3>Custom Theme</h3>
+
+<p>To get started creating a custom theme, you should use the provided blue theme as your base and modify the styles contained in <code>theme.css</code> as necessary. </p></div>
+</div> <!-- /content -->
+	
+	
+</div> <!-- /wrapper -->
+	
+<script>
+
+$(function () {
+	
+	$('pre').addClass ('prettyprint linenums');
+	prettyPrint ();
+	
+	getToc ();
+	
+	routeContent ();
+	
+	$('#nav a').each (function (i) {
+		
+		if ($(this).parent ().is ('.misc')) { return; }
+		
+		var a = $(this).clone ();
+		
+		var shortcut = $('<a>', {
+			'href': a.attr ('href'),
+			'class': 'shortcut'			
+		});
+		
+		var icon = $('<i>', {
+			'class': 'shortcut-icon ' + a.find ('i').attr ('class')
+		});
+		
+		var label = $('<span>', {
+			'class': 'shortcut-label',
+			'text': a.text ()
+		});		
+		
+		icon.appendTo (shortcut);
+		label.appendTo (shortcut);		
+		shortcut.appendTo ('.shortcuts');
+		
+	});	
+	
+	$('body').append ('<div id="toTop">^ Back to Top</div>');
+	
+	
+	$(window).bind ('hashchange', function (e) {
+		routeContent ();
+	});
+	
+	
+	$('#nav a, .shortcuts a, .brand').live ('click', function (e) {		
+		e.preventDefault ();		
+		location.hash = $(this).attr ('href').split ('#')[1];		
+	});
+	
+	$('#toTop').click(function() {
+		$('body,html').animate({scrollTop:0},800);
+	});
+	
+	$('a.third-party-doc').attr ('target', '_blank');
+	
+	
+	
+});
+
+function routeContent () {
+	
+	var hash = location.hash;
+	hash = hash.split ('#')[1];
+	
+	if (hash === undefined || hash === '') {
+		hash = 'home';
+	}
+	
+	$('#nav li').removeClass ('active');
+	
+	$('a[href=#' + hash + ']').parent ().addClass ('active');
+	
+	$('.content').hide ();
+	
+	var newPage = $('#' + hash + '-content').show ();
+	
+	if (newPage.length < 1) {
+		$("#error-content").show ();
+	}
+		
+			
+	$('body,html').animate({scrollTop:0},0);
+	
+	$(window).scroll(function() {
+		if($(this).scrollTop() != 0) {
+			$('#toTop').fadeIn();	
+		} else {
+			$('#toTop').fadeOut();
+		}
+	});
+ 
+	
+}
+
+function getToc () {
+		
+		
+	$('.content').each (function (i) {
+		
+		var toc = '<ol class="toc">';
+		
+		$(this).find ('h3').each (function (i) {
+			var h3, id, pageSlug, slug;
+			
+			h3 = $(this);
+			pageSlug = slugify ($.trim ($(this).parents ('.content').find ('h1').text ()));
+			id = slugify (h3.text ());
+			slug = pageSlug + '-' + id;
+			
+			
+			
+			toc += '<li><a href="#' + slug + '">' + h3.text () + '</a></li>';
+			
+			h3.attr ('id', slug);
+			h3.text ((i+1) + '. ' + h3.text ());
+
+		});
+		
+		
+		toc += '</ol>';
+		
+		$(this).find ('hr').eq (0).before (toc);
+	});
+		
+	
+	
+	$('.toc').find ('a').bind ('click', function (e) {
+		e.preventDefault ();	
+		$.scrollTo ( $(this).attr ('href') , 1000 );
+	});
+}
+
+function slugify(text) {
+	text = text.replace(/[^-a-zA-Z0-9,&\s]+/ig, '');
+	text = text.replace(/-/gi, "_");
+	text = text.replace(/\s/gi, "-");
+	text = text.toLowerCase ();
+	return text;
+}
+
+</script>
+	
+</body>
+
+</html>
