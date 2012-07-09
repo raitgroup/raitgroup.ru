@@ -12,14 +12,20 @@
     <link href="./css/focus.css" rel="stylesheet"> 
     <link href="./css/focus-responsive.css" rel="stylesheet">
        
+    {% if page.url == "/index.html" %}
     <link href="./css/pages/homepage.css" rel="stylesheet">   
+    {% endif %}
 
-    {%if page.url == "/contacts.html" %}
+    {% if page.url == "/contacts.html" %}
     <link href="./css/pages/contacts.css" rel="stylesheet">   
     {% endif %}
 
-    {%if page.url == "/services.html" %}
+    {% if page.url == "/services.html" %}
     <link href="./css/pages/services.css" rel="stylesheet">   
+    {% endif %}
+
+    {% if page.url == "/about.html" %}  
+    <link href="./css/pages/about.css" rel="stylesheet">
     {% endif %}
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -35,12 +41,8 @@
 	<div id="header">
 		<div class="container">
 			<div class="row">
-				<div class="grid-10">
+				<div class="grid-12">
 					<h1 id="title">	<a href="./index.html">	Raitgroup </a> </h1>
-				</div>
-				<div class="grid-2">
-					<strong>+7 (351) 776-49-60</strong><br/>
-					<strong>+7 (351) 776-49-61</strong><br/>
 				</div>
 			</div> <!-- /row -->
 		</div> <!-- /container -->
