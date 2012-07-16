@@ -1,0 +1,5 @@
+---
+layout: master
+title: Аурус
+category: portfolio
+---

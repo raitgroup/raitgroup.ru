@@ -5,33 +5,23 @@ title: Наша работа
 
 <div id="content">
         <div class="container">
+	{% for post in site.categories.portfolio reversed %}
 
+		{% case forloop.index0 %}
+		{% when 0 or 4 or 8 or 12 or 16 or 20 or 24 or 28 or 32 or 36 or 40 or 44 or 48 %}
 		<div class="row">
-		        <div class="grid-3">
-				<img src="http://placehold.it/200x100">
-				<h2>Автомиг</h2>
-				<p>Такси</p>
-			</div>
+		{% endcase %}
 			<div class="grid-3">
 				<img src="http://placehold.it/200x100">
+				<h2>{{post.title}}</h2>
+				<div>{{post.brief}}</div>
 			</div>
-		        <div class="grid-3">
-				<img src="http://placehold.it/200x100">
-			</div>
-			<div class="grid-3">
-				<img src="http://placehold.it/200x100">
-			</div>
-		</div>
-		<div class="row">
-			<div class="grid-3">
-				<img src="http://placehold.it/200x100">
-			</div>
-			<div class="grid-3">
-				<img src="http://placehold.it/200x100">
-			</div>
-			<div class="grid-3">
-				<img src="http://placehold.it/200x100">
-			</div>
-		</div>
+		{% case forloop.index %}
+	        {% when 4 or 8 or 12 or 16 or 20 or 24 or 28 or 32 or 36 or 40 or 44 or 48 or 52 %}
+                </div> <!-- /row-->
+        	{% endcase %}
+	{% endfor%}
 
+	</div>
+</div>
 
