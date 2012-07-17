@@ -29,9 +29,11 @@ title: Наша работа
 				<div class="modal hide" id="about{{forloop.index0}}">
 					<div class="modal-body">
 						<h3>{{post.title}}</h3>
-						{{post.brief}}
+						{% if post.brief %}
+						<div><i class="icon-info-sign"></i> {{post.brief}}</div>
+						{% endif %}
 						{% if post.since %}
-						<div><i class="icon-time"></i> с {{post.since}} года</div>
+						<div><i class="icon-time"></i> Сотрудничаем с {{post.since}} года</div>
 						{% endif %}
 						{% if post.extsite %}
 						<div><i class="icon-home"></i> <a href="{{post.extsite}}">{{post.extsite}}</a></div>
