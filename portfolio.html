@@ -3,21 +3,50 @@ layout: master
 title: Наша работа
 ---
 
+<!-- https://github.com/flatterline/jekyll-plugins -->
 <div id="content">
         <div class="container">
 	{% for post in site.categories.portfolio reversed %}
 
 		{% case forloop.index0 %}
-		{% when 0 or 4 or 8 or 12 or 16 or 20 or 24 or 28 or 32 or 36 or 40 or 44 or 48 %}
+		{% when 0 or 3 or 6 or 9 or 12 or 15 or 18 or 21 or 24 or 27 or 30 or 33 or 36 or 39 or 42 or 45 %}
 		<div class="row">
 		{% endcase %}
-			<div class="grid-3">
-				<img src="http://placehold.it/200x100">
-				<h2>{{post.title}}</h2>
+			<div class="grid-4">
+				{% if post.logo %}
+				<center><img src="{{post.logo}}"></center>
+				{% else %}
+				<img src="http://placehold.it/300x100">
+				{% endif %}
+
+				<strong>{{post.title}}</strong>
 				<div>{{post.brief}}</div>
+
+
+				<a data-toggle="modal" href="#about{{forloop.index0}}">Посмотреть</a>
+
+				<!-- extended information -->
+				<div class="modal hide" id="about{{forloop.index0}}">
+					<div class="modal-body">
+						<h3>{{post.title}}</h3>
+						{{post.brief}}
+						{% if post.since %}
+						<div><i class="icon-time"></i> с {{post.since}} года</div>
+						{% endif %}
+						{% if post.extsite %}
+						<div><i class="icon-home"></i> <a href="{{post.extsite}}">{{post.extsite}}</a></div>
+						{% endif %}
+						<p>{{post.content}}</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn" data-dismiss="modal">Закрыть</a>
+					</div>
+				</div>
+				<!-- /extended information -->
+
 			</div>
 		{% case forloop.index %}
-	        {% when 4 or 8 or 12 or 16 or 20 or 24 or 28 or 32 or 36 or 40 or 44 or 48 or 52 %}
+		{% when 3 or 6 or 9 or 12 or 15 or 18 or 21 or 24 or 27 or 30 or 33 or 36 or 39 or 42 or 45 %}
                 </div> <!-- /row-->
         	{% endcase %}
 	{% endfor%}

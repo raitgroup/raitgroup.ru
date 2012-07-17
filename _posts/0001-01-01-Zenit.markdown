@@ -2,5 +2,7 @@
 layout: master
 title: Зенит
 brief: Туристическая компания
+extsite: http://www.zenit-tour.ru/
+logo: img/logo/zenit.png
 category: portfolio
 ---

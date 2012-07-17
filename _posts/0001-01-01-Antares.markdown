@@ -1,5 +1,9 @@
 ---
 layout: master
 title: Антарес
+brief: ???
+extsite: ???
+logo: http://placehold.it/100x100
+since: ???
 category: portfolio
 ---
